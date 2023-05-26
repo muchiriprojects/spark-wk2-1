@@ -2,16 +2,16 @@ package ke.co.safaricom;
 
 import java.util.ArrayList;
 
-     public class Hero {
+     public class hero {
          private String name;
          private int age;
          private final int id;
          private ArrayList<String> powers;
          private ArrayList<String> weaknesses;
-         private static ArrayList<Hero> instances = new ArrayList<Hero>();
+         private static ArrayList<hero> instances = new ArrayList<hero>();
          private int squadId;
 
-         public Hero (String name,int age,ArrayList<String> powers,ArrayList<String> weaknesses, int squadId){
+         public hero(String name, int age, ArrayList<String> powers, ArrayList<String> weaknesses, int squadId){
              this.name=name;
              this.age=age;
              this.powers=powers;
@@ -42,7 +42,7 @@ import java.util.ArrayList;
              return id;
          }
 
-         public static ArrayList<Hero> getAll(){
+         public static ArrayList<hero> getAll(){
              return instances;
          }
          public static void clearAll(){
@@ -50,7 +50,7 @@ import java.util.ArrayList;
          }
 
 
-         public static Hero findById(int id){
+         public static hero findById(int id){
              return  instances.get(id-1);
          }
          public void deleteHero(){

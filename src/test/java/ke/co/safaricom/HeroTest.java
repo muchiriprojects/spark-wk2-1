@@ -19,7 +19,7 @@ public class HeroTest {
 
     }
 
-    public Hero setupNewHero() throws Exception{
+    public hero setupNewHero() throws Exception{
         ArrayList<String> powers = new ArrayList<String>();
         ArrayList<String> name= new ArrayList<String>();
         ArrayList<String> weaknesses = new ArrayList<String>();
@@ -29,31 +29,31 @@ public class HeroTest {
         weaknesses.add("Impatience");
         weaknesses.add("slow");
 
-        Hero hero = new Hero("Nick",25,powers,weaknesses,1);
+        hero hero = new hero("Nick",25,powers,weaknesses,1);
         return  hero;
     }
 
     @Test
     public void HeroInstanceWithPowers_true() throws Exception{
-        Hero hero = setupNewHero();
+        hero hero = setupNewHero();
         assertTrue(hero.getPowers().contains("jump"));
     }
 
 
     @Test
     public void HeroInstanceWithName_true() throws Exception{
-        Hero hero = setupNewHero();
+        hero hero = setupNewHero();
         assertEquals("james",hero.getName());
     }
 
     @Test
     public void HeroInstanceWithAge_true() throws Exception{
-        Hero hero = setupNewHero();
+        hero hero = setupNewHero();
         assertEquals(25,hero.getAge());
     }
     @Test
     public void HeroInstanceWithWeaknesses_true() throws Exception{
-        Hero hero = setupNewHero();
+        hero hero = setupNewHero();
         assertTrue(hero.getWeaknesses().contains("slow"));
     }
 

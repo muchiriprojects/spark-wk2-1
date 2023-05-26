@@ -46,14 +46,14 @@ public class App {
             ArrayList<Squad> squads = Squad.getAll();
             model.put("squads", squads);
             int squadId = Integer.parseInt(request.queryParams("squadId"));
-            Hero hero = new Hero(name, age, powers, weaknesses, squadId);
+            hero hero = new hero(name, age, powers, weaknesses, squadId);
             model.put("hero", hero);
             return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/heroes", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            ArrayList<Hero> heroes = Hero.getAll();
+            ArrayList<hero> heroes = hero.getAll();
             model.put("heroes", heroes);
             ArrayList<Squad> squads = Squad.getAll();
             model.put("squads", squads);
@@ -62,12 +62,12 @@ public class App {
 
         get("/heroes/list", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            ArrayList<Hero> heroes = Hero.getAll();
+            ArrayList<hero> heroes = hero.getAll();
             model.put("heroes", heroes);
             ArrayList<Squad> squads = Squad.getAll();
             model.put("squads", squads);
-            for (Hero hero : heroes) {
-                int heroFindId = hero.getSquadId();
+            for (ke.co.safaricom.hero hero : heroes) {
+                int heroFindId = hero.getId();
                 Squad squad = Squad.findById(heroFindId);
                 model.put("squad", squad);
             }
@@ -78,10 +78,10 @@ public class App {
         get("/heroes/:id", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfHeroToFind = Integer.parseInt(request.params("id"));
-            Hero foundHero = Hero.findById(idOfHeroToFind);
-            int squadId = foundHero.getSquadId();
+            hero foundHero = hero.findById(idOfHeroToFind);
+            int squadId = foundHero.getId();
             Squad squad = Squad.findById(squadId);
-            ArrayList<Hero> heroes = Hero.getAll();
+            ArrayList<hero> heroes = hero.getAll();
             model.put("squad", squad);
             model.put("hero", foundHero);
             model.put("heroes", heroes);
@@ -113,7 +113,7 @@ public class App {
         get("/squad/:id", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             int squadId = Integer.parseInt(request.params("squadId"));
-            Hero heroes = Hero.findById(squadId);
+            hero heroes = hero.findById(squadId);
             Squad squads = Squad.findById(squadId);
             model.put("squad", squads);
             model.put("heroes", heroes);
