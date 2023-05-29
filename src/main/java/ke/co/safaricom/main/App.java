@@ -1,5 +1,9 @@
-package ke.co.safaricom;
 
+package ke.co.safaricom.main;
+
+
+import ke.co.safaricom.Hero;
+import ke.co.safaricom.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -15,7 +19,7 @@ public class App {
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
-        return 8080; //return default port if heroku-port isn't set (i.e. on localhost)
+        return 5433; //return default port if heroku-port isn't set (i.e. on localhost)
     }
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
@@ -46,14 +50,14 @@ public class App {
             ArrayList<Squad> squads = Squad.getAll();
             model.put("squads", squads);
             int squadId = Integer.parseInt(request.queryParams("squadId"));
-            hero hero = new hero(name, age, powers, weaknesses, squadId);
+            Hero hero = new Hero(name, age, powers, weaknesses, squadId);
             model.put("hero", hero);
             return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/heroes", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            ArrayList<hero> heroes = hero.getAll();
+            ArrayList<Hero> heroes = Hero.getAll();
             model.put("heroes", heroes);
             ArrayList<Squad> squads = Squad.getAll();
             model.put("squads", squads);
@@ -62,11 +66,11 @@ public class App {
 
         get("/heroes/list", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            ArrayList<hero> heroes = hero.getAll();
+            ArrayList<Hero> heroes = Hero.getAll();
             model.put("heroes", heroes);
             ArrayList<Squad> squads = Squad.getAll();
             model.put("squads", squads);
-            for (ke.co.safaricom.hero hero : heroes) {
+            for (Hero hero : heroes) {
                 int heroFindId = hero.getId();
                 Squad squad = Squad.findById(heroFindId);
                 model.put("squad", squad);
@@ -78,10 +82,10 @@ public class App {
         get("/heroes/:id", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfHeroToFind = Integer.parseInt(request.params("id"));
-            hero foundHero = hero.findById(idOfHeroToFind);
+            Hero foundHero = Hero.findById(idOfHeroToFind);
             int squadId = foundHero.getId();
             Squad squad = Squad.findById(squadId);
-            ArrayList<hero> heroes = hero.getAll();
+            ArrayList<Hero> heroes = Hero.getAll();
             model.put("squad", squad);
             model.put("hero", foundHero);
             model.put("heroes", heroes);
@@ -113,7 +117,7 @@ public class App {
         get("/squad/:id", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             int squadId = Integer.parseInt(request.params("squadId"));
-            hero heroes = hero.findById(squadId);
+            Hero heroes = Hero.findById(squadId);
             Squad squads = Squad.findById(squadId);
             model.put("squad", squads);
             model.put("heroes", heroes);

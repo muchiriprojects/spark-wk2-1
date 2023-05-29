@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a978120c-388f-4b7d-b7e2-8b9ee757583d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/main/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/hero.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/main/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ke/co/safaricom/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ke/co/safaricom/HeroTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,19 +62,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/rmuchiri/spark-wk2-1",
-    "onboarding.tips.debug.path": "C:/Users/rmuchiri/spark-wk2-1/src/main/java/ke/co/safaricom/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rmuchiri/spark-wk2-1&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/rmuchiri/spark-wk2-1/src/main/java/ke/co/safaricom/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -80,7 +84,7 @@
       <recent name="ke.co.safaricom.main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ke.co.safaricom.App">
+  <component name="RunManager" selected="Application.ke.co.safaricom.main.App">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ke.co.safaricom.java.App" />
       <module name="spark-wk2-1.main" />
@@ -94,12 +98,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ke.co.safaricom.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ke.co.safaricom.App" />
+    <configuration name="ke.co.safaricom.main.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ke.co.safaricom.main.App" />
       <module name="spark-wk2-1.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ke.co.safaricom.*" />
+          <option name="PATTERN" value="ke.co.safaricom.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,7 +161,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ke.co.safaricom.App" />
+        <item itemvalue="Application.ke.co.safaricom.main.App" />
         <item itemvalue="Gradle.Tests in 'spark-wk2-1.test'" />
         <item itemvalue="Application.ke.co.safaricom.main.main" />
         <item itemvalue="Application.main" />
